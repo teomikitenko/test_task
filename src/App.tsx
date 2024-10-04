@@ -1,12 +1,12 @@
 import style from "./App.module.scss";
 import Employees from "./feautures/employees/Employees";
-import MainPanel from "./Components/MainPanel/MainPanel";
-import  NavPanel  from "./Components/NavPanel/NavPanel";
+import MainPanel from "./Components/MainContent/MainContent";
+import  SideBar  from "./Components/SideBar/SideBar";
 
 function App() {
   return (
     <div className={style.main}>
-      <NavPanel/>
+      <SideBar/>
       <MainPanel/>
      {/* <Employees/> */}
     </div>

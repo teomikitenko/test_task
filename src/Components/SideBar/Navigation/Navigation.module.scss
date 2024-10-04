@@ -1,0 +1,14 @@
+@function toRem($value) {
+    $remValue: calc($value / 16)+rem;
+    @return $remValue;
+}
+
+.navigation_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: toRem(48);
+    gap: toRem(21);
+    &__navigation_item{
+        display: flex;
+    }
+}
