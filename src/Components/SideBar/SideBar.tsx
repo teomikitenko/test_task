@@ -9,7 +9,7 @@ const SideBar = () => {
   const { name } = useSelector((state: RootState) => state.user);
   return (
     <div className={style.side_bar}>
-      <div className={style.side_bar_header}>
+      <header className={style.side_bar_header}>
         <div className={style.side_bar_header_user}>
           <img src={userIcon} alt="" />
         </div>
@@ -20,7 +20,7 @@ const SideBar = () => {
         <div className={style.side_bar_header__setting_container}>
           <img src={settingsIcon} alt="" />
         </div>
-      </div>
+      </header>
       <Navigation />
     </div>
   );

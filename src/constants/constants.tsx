@@ -5,6 +5,8 @@ import product from "../assets/product.svg";
 import file from "../assets/file.svg";
 import message from "../assets/message.svg";
 import crypto from "../assets/crypto.svg";
+import anchor from "../assets/anchor.svg";
+import powerOff from "../assets/power-off.svg";
 
 const NAV_ITEMS = [
   { title: "Search", icon: search },

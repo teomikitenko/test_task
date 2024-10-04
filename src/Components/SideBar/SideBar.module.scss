@@ -1,13 +1,8 @@
-@function toRem($value) {
-    $remValue: calc($value / 16)+rem;
-    @return $remValue;
-}
-
 .side_bar {
     display: flex;
     flex-direction: column;
-    background-color: #F1F2F6;
-    padding: toRem(38) toRem(22);
+    background-color: $secondary_color;
+    padding: toRem(30) toRem(22);
 
     h1 {
         font-weight: 300;
@@ -42,7 +37,7 @@
 
         &__setting_container {
             border-radius: toRem(10);
-            background-color: #FFFFFF;
+            background-color: $main_color;
             padding: toRem(12) toRem(17) toRem(9);
 
             img {

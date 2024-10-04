@@ -1,17 +1,54 @@
-import style from './Navigation.module.scss'
+import style from "./Navigation.module.scss";
 import { NAV_ITEMS } from "../../../constants/constants";
-import burger from '../../../assets/burger.svg'
+import burger from "../../../assets/burger.svg";
+import anchor from "../../../assets/anchor.svg";
+import powerOff from "../../../assets/power-off.svg";
 
 const Navigation = () => {
   return (
-    <div className={style.navigation_container}>
-      {NAV_ITEMS.map((i) => (
-        <div className={style.navigation_container__navigation_item} >
-          <img src={i.icon} alt='nav-icon' />
-          <p>{i.title}</p>
-          <img src={burger} alt="burger-icon" />
+    <div className={style.sidebar_menu_container}>
+      <div className={style.navigation_items_container}>
+        {NAV_ITEMS.map((i) => (
+          <div className={style.navigation_items_container__navigation_item}>
+            <div
+              className={
+                style.navigation_items_container__navigation_item__icon_name_container
+              }
+            >
+              <div
+                className={
+                  style.navigation_items_container__navigation_item__icon_name_container_icon
+                }
+              >
+                <img src={i.icon} alt="nav-icon" />
+              </div>
+              <div
+                className={
+                  style.navigation_items_container__navigation_item__icon_name_container_name
+                }
+              >
+                <p>{i.title}</p>
+              </div>
+            </div>
+
+            <img src={burger} alt="burger-icon" />
+          </div>
+        ))}
+      </div>
+      <footer className={style.side_bar_footer_container}>
+        <div className={style.side_bar_footer_container_item}>
+          <div>
+            <img src={anchor} alt="support-icon" />
+          </div>
+          <p>Support</p>
         </div>
-      ))}
+        <div className={style.side_bar_footer_container_item}>
+          <div>
+            <img src={powerOff} alt="sign-out-icon" />
+          </div>
+          <p>Sign Out</p>
+        </div>
+      </footer>
     </div>
   );
 };

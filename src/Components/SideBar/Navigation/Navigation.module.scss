@@ -1,14 +1,87 @@
-@function toRem($value) {
-    $remValue: calc($value / 16)+rem;
-    @return $remValue;
-}
-
-.navigation_container{
+.sidebar_menu_container {
     display: flex;
     flex-direction: column;
-    margin-top: toRem(48);
-    gap: toRem(21);
-    &__navigation_item{
+    height: 100%;
+    justify-content: space-between;
+    padding-left: toRem(19);
+    padding-right: toRem(19);
+
+
+    .navigation_items_container {
         display: flex;
+        flex-direction: column;
+        margin-top: toRem(48);
+        gap: toRem(21);
+
+        &__navigation_item {
+            display: flex;
+            justify-content: space-between;
+
+            &__icon_name_container {
+                display: flex;
+                gap: toRem(15);
+
+                &_icon {
+                    display: flex;
+                    align-content: center;
+                    position: relative;
+                    width: toRem(22);
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                &_name {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+
+                        font-weight: 400;
+                        font-size: toRem(17);
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .side_bar_footer_container {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(21);
+
+        &_item {
+            display: flex;
+            gap: toRem(15);
+
+            div {
+                position: relative;
+                width: toRem(22);
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: toRem(17);
+            }
+        }
     }
 }
