@@ -1,6 +1,7 @@
 import type { RootState } from "../../../app/store";
 import { useSelector } from "react-redux";
 import style from "./MainSection.module.scss";
+import EmployeesDataTable from "../EmployeesDataTable/EmployeesDataTable";
 
 const MainSection = () => {
   const budget = useSelector((state: RootState) => state.budget);
@@ -18,6 +19,7 @@ const MainSection = () => {
           ))}
         </div>
       </div>
+      <EmployeesDataTable/>
     </main>
   );
 };

@@ -1,4 +1,5 @@
 export type Employee = {
+  icon: string;
   name: string;
   email: string;
   status: string;
@@ -6,6 +7,7 @@ export type Employee = {
 };
 
 export type UserAccount = {
+  icon: string;
   name: string;
-  email: string;     
+  email: string;
 };

@@ -2,15 +2,17 @@
     border-top: 2px solid $secondary_color;
     display: flex;
     flex-direction: column;
-    padding: toRem(34) toRem(34) toRem(39) toRem(34);
+    padding-top: toRem(34);
 
-    &__search_result {}
+
+    &__search_result {
+        padding: 0 toRem(34);
+    }
 
     &__budget_card {
-        padding-top: toRem(35);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        column-gap: toRem(50);
+        column-gap: toRem(30);
 
         div {
             display: flex;
@@ -36,7 +38,8 @@
         div:nth-child(2) {
             background-color: $accent_color;
             color: $main_color;
-            p{
+
+            p {
                 color: $main_color;
             }
         }

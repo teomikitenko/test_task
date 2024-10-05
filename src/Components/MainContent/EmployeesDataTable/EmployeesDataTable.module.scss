@@ -1,0 +1,66 @@
+.data_table {
+    margin-top: toRem(39);
+    overflow-y: auto;
+    width: 100%;
+    height: toRem(300);
+
+    table {
+        width: 100%;
+
+        tr:nth-child(odd) {
+            background-color: $secondary_color;
+        }
+
+        thead {
+            tr>th:nth-child(1) {
+                padding-left: toRem(26);
+            }
+
+            tr>th {
+                position: sticky;
+                top: 0;
+                background-color: $main_color;
+                text-align: start;
+                padding: toRem(17) 0;
+
+            }
+
+
+
+
+
+
+        }
+
+        tbody {
+            p {
+                text-align: start;
+            }
+
+
+            tr>td {
+
+                div {
+                    display: flex;
+                    gap: toRem(20);
+                    padding: toRem(10) toRem(10) toRem(10) toRem(26);
+
+                    p {
+                        display: flex;
+                        align-items: center;
+
+                    }
+                }
+           
+            }
+            tr>td:last-child>div {
+           display: flex;
+           justify-content: space-between;
+            padding-left: 0 ;
+            
+            }
+        }
+
+
+    }
+}
