@@ -7,7 +7,7 @@ import powerOff from "../../../assets/power-off.svg";
 const Navigation = () => {
   return (
     <div className={style.sidebar_menu_container}>
-      <div className={style.navigation_items_container}>
+      <nav className={style.navigation_items_container}>
         {NAV_ITEMS.map((i) => (
           <div className={style.navigation_items_container__navigation_item}>
             <div
@@ -34,7 +34,7 @@ const Navigation = () => {
             <img src={burger} alt="burger-icon" />
           </div>
         ))}
-      </div>
+      </nav>
       <footer className={style.side_bar_footer_container}>
         <div className={style.side_bar_footer_container_item}>
           <div>
