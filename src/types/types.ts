@@ -40,3 +40,8 @@ export type SortPayload = {
   sortBy: string;
   alpOrder: boolean;
 };
+export type SortIconColorType = {
+  up: string;
+  down: string;
+  defaultDown: string;
+};

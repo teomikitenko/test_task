@@ -19,7 +19,19 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: toRem(30);
 
-    div {
+    &__title {
+      display: flex;
+      gap: toRem(14);
+
+      &__icon {
+        display: flex;
+        background-color: transparent !important;
+        justify-content: center;
+        align-content: center;
+      }
+    }
+
+    &__container {
       display: flex;
       flex-direction: column;
       gap: toRem(10);
