@@ -1,12 +1,13 @@
-import style from "./SideBar.module.scss";
-import type { RootState } from "../../app/store";
-import { useSelector } from "react-redux";
-import userIcon from "../../assets/image/user.png";
-import settingsIcon from "../../assets/settings.svg";
-import Navigation from "./Navigation/Navigation";
+import {useSelector} from 'react-redux';
+
+import type {RootState} from '../../app/store';
+import userIcon from '../../assets/image/user.png';
+import settingsIcon from '../../assets/settings.svg';
+import Navigation from './Navigation/Navigation';
+import style from './SideBar.module.scss';
 
 const SideBar = () => {
-  const { name } = useSelector((state: RootState) => state.user);
+  const {name} = useSelector((state: RootState) => state.user);
   return (
     <div className={style.side_bar}>
       <header className={style.side_bar_header}>

@@ -1,15 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import type { ModalManager } from "../../types/types";
+import type {PayloadAction} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
+
+import type {ModalManager} from '../../types/types';
 
 const initialState: ModalManager = {
   open: false,
-  modalName: "",
-  searchId: undefined ,
+  modalName: '',
+  searchId: undefined,
 };
 
 export const modalSlice = createSlice({
-  name: "modals",
+  name: 'modals',
   initialState,
   reducers: {
     addUserModal: (state, action: PayloadAction<ModalManager>) => {
@@ -29,5 +30,5 @@ export const modalSlice = createSlice({
   },
 });
 
-export const { addUserModal, editUserModal } = modalSlice.actions;
+export const {addUserModal, editUserModal} = modalSlice.actions;
 export default modalSlice.reducer;

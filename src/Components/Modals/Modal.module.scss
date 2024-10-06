@@ -1,66 +1,71 @@
 .modal_backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .modal_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
 
-    .modal_container {
+    .modal {
+      display: flex;
+      border: orange;
+      border-radius: toRem(10);
+      background-color: $main_color;
+      padding: toRem(35) toRem(35);
+
+      form {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        flex-direction: column;
+        gap: toRem(12);
 
-        .modal {
-            display: flex;
-            border: orange;
-            border-radius: toRem(10);
-            background-color: $main_color;
-            padding: toRem(35) toRem(35);
+        input {
+          margin-top: toRem(6);
+          padding: toRem(6) toRem(12);
+          border-radius: toRem(10);
+          font-weight: 400;
+          font-size: toRem(15);
+          font-family: 'Roboto';
+          color: rgba(64, 77, 97, 1);
+          caret-color: $accent_color;
+          border-color: $accent_color !important;
 
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: toRem(12);
-
-                input {
-                    padding: toRem(6) toRem(12);
-                    border-radius: toRem(10);
-                    border-color: $accent_color !important;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
-
-            &__buttons_container {
-                display: flex;
-                justify-content: space-between;
-                margin-top: toRem(10);
-
-                button {
-                    border-width: 0;
-                    border-radius: toRem(10);
-                    padding: toRem(10) toRem(20);
-
-                    p {
-                        color: $main_color;
-                    }
-
-                }
-
-                button:first-child {
-                    background-color: #F63F3F;
-                }
-
-                button:last-child {
-                    background-color: $accent_color;
-                }
-            }
+          &:focus {
+            outline: none;
+          }
         }
+      }
+
+      &__buttons_container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: toRem(10);
+
+        button {
+          border-width: 0;
+          border-radius: toRem(10);
+          padding: toRem(13) toRem(20);
+
+          p {
+            color: $main_color;
+          }
+        }
+
+        button:first-child {
+          background-color: #f63f3f;
+        }
+
+        button:last-child {
+          background-color: $accent_color;
+        }
+      }
     }
+  }
 }

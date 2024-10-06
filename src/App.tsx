@@ -1,7 +1,7 @@
-import style from "./App.module.scss";
-import MainPanel from "./Components/MainContent/MainContent";
-import SideBar from "./Components/SideBar/SideBar";
-import ModalManager from "./Components/Modals/ModalManager";
+import style from './App.module.scss';
+import MainPanel from './Components/MainContent/MainContent';
+import ModalManager from './Components/Modals/ModalManager';
+import SideBar from './Components/SideBar/SideBar';
 
 function App() {
   return (

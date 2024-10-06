@@ -1,43 +1,47 @@
-import { debounce } from "lodash";
-import style from "./MainContent.module.scss";
-import search from "../../assets/search.svg";
-import deleteCircle from "../../assets/delete-circle.svg";
-import MainSection from "./MainSection/MainSection";
-import { useDispatch } from "react-redux";
-import { addUserModal } from "../../feautures/modals/modalsSlice";
-import { searchEmployeeByName,resetEmployeeFilter } from "../../feautures/employees/crudEmployeesSlice";
-import { useState, useEffect} from "react";
+import {debounce} from 'lodash';
+import React from 'react';
+import {useEffect, useState} from 'react';
+import {useDispatch} from 'react-redux';
+
+import deleteCircle from '../../assets/delete-circle.svg';
+import search from '../../assets/search.svg';
+import {
+  resetEmployeeFilter,
+  searchEmployeeByName,
+} from '../../feautures/employees/crudEmployeesSlice';
+import {addUserModal} from '../../feautures/modals/modalsSlice';
+import style from './MainContent.module.scss';
+import MainSection from './MainSection/MainSection';
 
 const MainContent = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const dispatch = useDispatch();
 
   const addEmployeeHandler = () => {
     dispatch(
       addUserModal({
         open: true,
-        modalName: "addEmployee",
+        modalName: 'addEmployee',
         searchId: undefined,
       })
     );
   };
 
-  const debouncedDispatch = debounce((value) => {
+  const debouncedDispatch = debounce(value => {
     dispatch(searchEmployeeByName(value));
   }, 300);
 
   useEffect(() => {
-    if (value) {
-      debouncedDispatch(value);
-    }
+    debouncedDispatch(value);
+
     return () => {
       debouncedDispatch.cancel();
     };
-  }, [value]);
+  }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const resetValue = () => {
-    setValue("");
-    dispatch(resetEmployeeFilter())
+    setValue('');
+    dispatch(resetEmployeeFilter());
   };
   const searchVal = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);

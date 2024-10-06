@@ -3,13 +3,13 @@ export type Employee = {
   icon?: string | undefined;
   name: string;
   email: string;
-  status: "Free" | "Busy" | "Workin" | "Working" | "On Vacation";
+  status: 'Free' | 'Busy' | 'Workin' | 'Working' | 'On Vacation';
   role: string;
 };
 export type EmployeeState = {
   employee: Employee[];
   search: string;
-  filteredEmployess: Employee[] ;
+  filteredEmployess: Employee[];
 };
 
 export type UserAccount = {
@@ -26,7 +26,7 @@ export type StatusStyle = {
 };
 export type ModalManager = {
   open: boolean;
-  modalName: "addEmployee" | "editEmployee" | "";
+  modalName: 'addEmployee' | 'editEmployee' | '';
   searchId: number | undefined;
 };
 export type FormInputs = {
@@ -35,4 +35,8 @@ export type FormInputs = {
   email: string;
   status: string;
   role: string;
+};
+export type SortPayload = {
+  sortBy: string;
+  alpOrder: boolean;
 };

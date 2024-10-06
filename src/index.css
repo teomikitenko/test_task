@@ -1,8 +1,9 @@
-html,body{
+html,
+body {
   height: 100%;
 }
 
-body{
+body {
   display: flex;
   min-height: 100%;
 }
@@ -16,9 +17,9 @@ body{
 p,
 h1,
 h2 {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   color: rgba(64, 77, 97, 1);
 }
-#root{
+#root {
   width: 100%;
 }

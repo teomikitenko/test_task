@@ -1,19 +1,22 @@
-import { useRef } from "react";
-import style from "../Modal.module.scss";
-import type { RootState } from "../../../app/store";
-import { useSelector, useDispatch } from "react-redux";
-import { createEmloyee } from "../../../feautures/employees/crudEmployeesSlice";
-import { addUserModal } from "../../../feautures/modals/modalsSlice";
-import type { Employee } from "../../../types/types";
-import { useForm, SubmitHandler } from "react-hook-form";
-import type { FormInputs } from "../../../types/types";
+import React, {useRef} from 'react';
+import {SubmitHandler, useForm} from 'react-hook-form';
+import {useDispatch, useSelector} from 'react-redux';
+
+import type {RootState} from '../../../app/store';
+import {createEmloyee} from '../../../feautures/employees/crudEmployeesSlice';
+import {addUserModal} from '../../../feautures/modals/modalsSlice';
+import type {Employee} from '../../../types/types';
+import type {FormInputs} from '../../../types/types';
+import style from '../Modal.module.scss';
 
 const AddEmloyee = () => {
   const modalContainerRef = useRef(null);
-  const length = useSelector((state: RootState) => state.employee.employee.length);
+  const length = useSelector(
+    (state: RootState) => state.employee.employee.length
+  );
   const dispatch = useDispatch();
 
-  const { register, handleSubmit } = useForm<FormInputs>();
+  const {register, handleSubmit} = useForm<FormInputs>();
 
   const onSubmit: SubmitHandler<FormInputs> = ({
     lastName,
@@ -24,10 +27,10 @@ const AddEmloyee = () => {
   }) => {
     const createObj: Employee = {
       id: length + 1,
-      icon: "/src/assets/image/3.png",
+      icon: '/src/assets/image/3.png',
       name: `${firstName} ${lastName}`,
       email: email,
-      status: status as Employee["status"],
+      status: status as Employee['status'],
       role: role,
     };
     dispatch(createEmloyee(createObj));
@@ -37,7 +40,7 @@ const AddEmloyee = () => {
     dispatch(
       addUserModal({
         open: false,
-        modalName: "",
+        modalName: '',
         searchId: undefined,
       })
     );
@@ -62,24 +65,24 @@ const AddEmloyee = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <h2>Add Employee</h2>
             <label>
-              <p>Fist Name:</p>
-              <input type="text" {...register("firstName")} />
+              <p>Fist Name</p>
+              <input type="text" {...register('firstName')} />
             </label>
             <label>
-              <p>Last Name:</p>
-              <input type="text" {...register("lastName")} />
+              <p>Last Name</p>
+              <input type="text" {...register('lastName')} />
             </label>
             <label>
-              <p>Email:</p>
-              <input type="email" {...register("email")} />
+              <p>Email</p>
+              <input type="email" {...register('email')} />
             </label>
             <label>
-              <p>Status:</p>
-              <input type="text" {...register("status")} />
+              <p>Status</p>
+              <input type="text" {...register('status')} />
             </label>
             <label>
-              <p>Last Name:</p>
-              <input type="text" {...register("role")} />
+              <p>Last Name</p>
+              <input type="text" {...register('role')} />
             </label>
             <div className={style.modal__buttons_container}>
               <button onClick={closeModal} type="button">

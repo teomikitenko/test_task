@@ -1,15 +1,18 @@
-import style from "./Navigation.module.scss";
-import { NAV_ITEMS } from "../../../constants/constants";
-import burger from "../../../assets/burger.svg";
-import anchor from "../../../assets/anchor.svg";
-import powerOff from "../../../assets/power-off.svg";
+import anchor from '../../../assets/anchor.svg';
+import burger from '../../../assets/burger.svg';
+import powerOff from '../../../assets/power-off.svg';
+import {NAV_ITEMS} from '../../../constants/constants';
+import style from './Navigation.module.scss';
 
 const Navigation = () => {
   return (
     <div className={style.sidebar_menu_container}>
       <nav className={style.navigation_items_container}>
-        {NAV_ITEMS.map((i) => (
-          <div key={i.title} className={style.navigation_items_container__navigation_item}>
+        {NAV_ITEMS.map(i => (
+          <div
+            key={i.title}
+            className={style.navigation_items_container__navigation_item}
+          >
             <div
               className={
                 style.navigation_items_container__navigation_item__icon_name_container

@@ -1,18 +1,20 @@
-import style from "../Modal.module.scss";
-import { useRef } from "react";
-import type { RootState } from "../../../app/store";
-import { useSelector, useDispatch } from "react-redux";
-import { editEmployee } from "../../../feautures/employees/crudEmployeesSlice";
-import { editUserModal } from "../../../feautures/modals/modalsSlice";
-import type { Employee, FormInputs } from "../../../types/types";
-import { useForm, SubmitHandler } from "react-hook-form";
+import React from 'react';
+import {useRef} from 'react';
+import {SubmitHandler, useForm} from 'react-hook-form';
+import {useDispatch, useSelector} from 'react-redux';
+
+import type {RootState} from '../../../app/store';
+import {editEmployee} from '../../../feautures/employees/crudEmployeesSlice';
+import {editUserModal} from '../../../feautures/modals/modalsSlice';
+import type {Employee, FormInputs} from '../../../types/types';
+import style from '../Modal.module.scss';
 
 const EditEmployee = () => {
   const modalContainerRef = useRef(null);
   const employees = useSelector((state: RootState) => state.employee.employee);
   const modal = useSelector((state: RootState) => state.modal);
-  const { name, email, status, role, id, icon } = employees.filter(
-    (e) => e.id === modal.searchId
+  const {name, email, status, role, id, icon} = employees.filter(
+    e => e.id === modal.searchId
   )[0];
   const dispatch = useDispatch();
 
@@ -20,7 +22,7 @@ const EditEmployee = () => {
     dispatch(
       editUserModal({
         open: false,
-        modalName: "",
+        modalName: '',
         searchId: undefined,
       })
     );
@@ -34,10 +36,10 @@ const EditEmployee = () => {
     }
   };
 
-  const { register, handleSubmit } = useForm<FormInputs>({
+  const {register, handleSubmit} = useForm<FormInputs>({
     defaultValues: {
-      firstName: name.split(" ")[0],
-      lastName: name.split(" ")[1],
+      firstName: name.split(' ')[0],
+      lastName: name.split(' ')[1],
       email: email,
       status: status,
       role: role,
@@ -56,7 +58,7 @@ const EditEmployee = () => {
       icon: icon,
       name: `${firstName} ${lastName}`,
       email: email,
-      status: status as Employee["status"],
+      status: status as Employee['status'],
       role: role,
     };
     dispatch(editEmployee(editObj));
@@ -74,24 +76,24 @@ const EditEmployee = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <h2>Edit Employee</h2>
             <label>
-              <p>Fist Name:</p>
-              <input type="text" {...register("firstName")} />
+              <p>Fist Name</p>
+              <input type="text" {...register('firstName')} />
             </label>
             <label>
-              <p>Last Name:</p>
-              <input type="text" {...register("lastName")} />
+              <p>Last Name</p>
+              <input type="text" {...register('lastName')} />
             </label>
             <label>
-              <p>Email:</p>
-              <input type="email" {...register("email")} />
+              <p>Email</p>
+              <input type="email" {...register('email')} />
             </label>
             <label>
-              <p>Status:</p>
-              <input type="text" {...register("status")} />
+              <p>Status</p>
+              <input type="text" {...register('status')} />
             </label>
             <label>
-              <p>Role:</p>
-              <input type="text" {...register("role")} />
+              <p>Role</p>
+              <input type="text" {...register('role')} />
             </label>
             <div className={style.modal__buttons_container}>
               <button onClick={closeModal} type="button">

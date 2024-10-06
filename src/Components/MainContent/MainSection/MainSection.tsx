@@ -1,7 +1,8 @@
-import type { RootState } from "../../../app/store";
-import { useSelector } from "react-redux";
-import style from "./MainSection.module.scss";
-import EmployeesDataTable from "../EmployeesDataTable/EmployeesDataTable";
+import {useSelector} from 'react-redux';
+
+import type {RootState} from '../../../app/store';
+import EmployeesDataTable from '../EmployeesDataTable/EmployeesDataTable';
+import style from './MainSection.module.scss';
 
 const MainSection = () => {
   const employee = useSelector((state: RootState) => state.employee);
@@ -9,10 +10,10 @@ const MainSection = () => {
   return (
     <main className={style.main_section}>
       <div className={style.main_section__search_result}>
-        <p>Search text</p>
-        <p>{employee.length} results found</p>
+        <h2>{employee.search.length > 0 ? employee.search : 'Employee'}</h2>
+        <p>{employee.filteredEmployess.length} results found</p>
         <div className={style.main_section__budget_card}>
-          {budget.map(b=>(
+          {budget.map(b => (
             <div key={b.title}>
               <p>{b.title}</p>
               <p>{b.budget}</p>
@@ -20,7 +21,7 @@ const MainSection = () => {
           ))}
         </div>
       </div>
-      <EmployeesDataTable/>
+      <EmployeesDataTable />
     </main>
   );
 };

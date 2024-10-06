@@ -1,54 +1,50 @@
 .main_section {
-    border-top: 2px solid $secondary_color;
-    display: flex;
-    flex-direction: column;
-    padding-top: toRem(34);
+  border-top: 2px solid $secondary_color;
+  display: flex;
+  flex-direction: column;
+  padding-top: toRem(34);
 
+  &__search_result {
+    padding: 0 toRem(34);
 
-    &__search_result {
-        padding: 0  toRem(34) ;
-        p{
-            font-size: toRem(16);
-            font-weight: normal;
-        }
+    p {
+      font-size: toRem(16);
+      font-weight: normal;
+    }
+  }
+
+  &__budget_card {
+    margin-top: toRem(34);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: toRem(30);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(10);
+      padding: toRem(23) toRem(19);
+      border-radius: 10px;
+      background-color: $secondary_color;
+
+      p:nth-child(1) {
+        font-size: toRem(16);
+        font-weight: normal;
+      }
+
+      p:nth-child(2) {
+        font-size: toRem(22);
+        font-weight: bold;
+      }
     }
 
-    &__budget_card {
-        margin-top: toRem(34);
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: toRem(30);
+    div:nth-child(2) {
+      background-color: $accent_color;
+      color: $main_color;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            gap: toRem(10);
-            padding: toRem(23) toRem(19);
-            border-radius: 10px;
-            background-color: $secondary_color;
-
-            p:nth-child(1) {
-                font-size: toRem(16);
-                font-weight: normal;
-            }
-
-            p:nth-child(2) {
-                font-size: toRem(22);
-                font-weight: bold;
-
-            }
-        }
-
-
-        div:nth-child(2) {
-            background-color: $accent_color;
-            color: $main_color;
-
-            p {
-                color: $main_color;
-            }
-        }
+      p {
+        color: $main_color;
+      }
     }
-
-
+  }
 }
