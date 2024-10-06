@@ -81,7 +81,7 @@ const AddEmloyee = () => {
               <input type="text" {...register('status')} />
             </label>
             <label>
-              <p>Last Name</p>
+              <p>Role</p>
               <input type="text" {...register('role')} />
             </label>
             <div className={style.modal__buttons_container}>
