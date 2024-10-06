@@ -1,14 +1,14 @@
 import style from "./App.module.scss";
-import Employees from "./feautures/employees/Employees";
 import MainPanel from "./Components/MainContent/MainContent";
-import  SideBar  from "./Components/SideBar/SideBar";
+import SideBar from "./Components/SideBar/SideBar";
+import ModalManager from "./Components/Modals/ModalManager";
 
 function App() {
   return (
     <div className={style.main}>
-      <SideBar/>
-      <MainPanel/>
-     {/* <Employees/> */}
+      <SideBar />
+      <MainPanel />
+      <ModalManager />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Navigation = () => {
     <div className={style.sidebar_menu_container}>
       <nav className={style.navigation_items_container}>
         {NAV_ITEMS.map((i) => (
-          <div className={style.navigation_items_container__navigation_item}>
+          <div key={i.title} className={style.navigation_items_container__navigation_item}>
             <div
               className={
                 style.navigation_items_container__navigation_item__icon_name_container

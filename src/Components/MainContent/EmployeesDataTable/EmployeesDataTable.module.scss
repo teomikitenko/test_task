@@ -2,10 +2,12 @@
     margin-top: toRem(39);
     overflow-y: auto;
     width: 100%;
-    height: toRem(300);
+    height: toRem(290);
 
     table {
         width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
 
         tr:nth-child(odd) {
             background-color: $secondary_color;
@@ -24,12 +26,6 @@
                 padding: toRem(17) 0;
 
             }
-
-
-
-
-
-
         }
 
         tbody {
@@ -51,16 +47,20 @@
 
                     }
                 }
-           
             }
+
             tr>td:last-child>div {
-           display: flex;
-           justify-content: space-between;
-            padding-left: 0 ;
-            
+                display: flex;
+                justify-content: space-between;
+                padding-left: 0;
+
+                button {
+                    appearance: none;
+                    border: none;
+                    background-color: transparent
+                }
+
             }
         }
-
-
     }
 }

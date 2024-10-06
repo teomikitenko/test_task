@@ -6,10 +6,15 @@
 
 
     &__search_result {
-        padding: 0 toRem(34);
+        padding: 0  toRem(34) ;
+        p{
+            font-size: toRem(16);
+            font-weight: normal;
+        }
     }
 
     &__budget_card {
+        margin-top: toRem(34);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: toRem(30);

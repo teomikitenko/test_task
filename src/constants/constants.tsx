@@ -5,8 +5,6 @@ import product from "../assets/product.svg";
 import file from "../assets/file.svg";
 import message from "../assets/message.svg";
 import crypto from "../assets/crypto.svg";
-import anchor from "../assets/anchor.svg";
-import powerOff from "../assets/power-off.svg";
 
 const NAV_ITEMS = [
   { title: "Search", icon: search },
@@ -17,4 +15,16 @@ const NAV_ITEMS = [
   { title: "Messanger", icon: message },
   { title: "Crypto", icon: crypto },
 ];
-export { NAV_ITEMS };
+
+const STATUS_COLOR = {
+  'Free':"#0064FF",
+  'Busy':"#F63F3F",
+  'Workin':"#404D61",
+  'Working':"#404D61",
+  'OnVacation':"#F9A348"
+}
+  
+
+export { NAV_ITEMS,STATUS_COLOR };
+
+
