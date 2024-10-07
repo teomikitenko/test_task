@@ -1,8 +1,8 @@
 import {useSelector} from 'react-redux';
 
-import type {RootState} from '../../../app/store';
+import type {RootState} from '../../../state/store';
 import type {SortIconColorType} from '../../../types/types';
-import {SortIconDown,SortIconUp} from '../../SVGComponents/IconComponent';
+import {SortIconDown, SortIconUp} from '../../SVGComponents/IconComponent';
 import EmployeesDataTable from '../EmployeesDataTable/EmployeesDataTable';
 import style from './MainSection.module.scss';
 

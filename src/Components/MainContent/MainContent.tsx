@@ -8,8 +8,8 @@ import search from '../../assets/search.svg';
 import {
   resetEmployeeFilter,
   searchEmployeeByName,
-} from '../../feautures/employees/crudEmployeesSlice';
-import {addUserModal} from '../../feautures/modals/modalsSlice';
+} from '../../state/slices/employees/crudEmployeesSlice';
+import {addUserModal} from '../../state/slices/modals/modalsSlice';
 import style from './MainContent.module.scss';
 import MainSection from './MainSection/MainSection';
 

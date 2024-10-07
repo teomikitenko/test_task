@@ -3,9 +3,9 @@ import {useRef} from 'react';
 import {SubmitHandler, useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 
-import type {RootState} from '../../../app/store';
-import {editEmployee} from '../../../feautures/employees/crudEmployeesSlice';
-import {editUserModal} from '../../../feautures/modals/modalsSlice';
+import {editEmployee} from '../../../state/slices/employees/crudEmployeesSlice';
+import {editUserModal} from '../../../state/slices/modals/modalsSlice';
+import type {RootState} from '../../../state/store';
 import type {Employee, FormInputs} from '../../../types/types';
 import style from '../Modal.module.scss';
 

@@ -1,9 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import budgetReducer from '../feautures/budget/budgetSlice';
-import employessReducer from '../feautures/employees/crudEmployeesSlice';
-import modalReducer from '../feautures/modals/modalsSlice';
-import userReducer from '../feautures/userAccount/userAccountSlice';
+import budgetReducer from './slices/budget/budgetSlice';
+import employessReducer from './slices/employees/crudEmployeesSlice';
+import modalReducer from './slices/modals/modalsSlice';
+import userReducer from './slices/userAccount/userAccountSlice';
 
 export const store = configureStore({
   reducer: {

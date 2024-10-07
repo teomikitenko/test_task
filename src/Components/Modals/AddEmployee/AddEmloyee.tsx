@@ -2,9 +2,9 @@ import React, {useRef} from 'react';
 import {SubmitHandler, useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 
-import type {RootState} from '../../../app/store';
-import {createEmloyee} from '../../../feautures/employees/crudEmployeesSlice';
-import {addUserModal} from '../../../feautures/modals/modalsSlice';
+import {createEmloyee} from '../../../state/slices/employees/crudEmployeesSlice';
+import {addUserModal} from '../../../state/slices/modals/modalsSlice';
+import type {RootState} from '../../../state/store';
 import type {Employee} from '../../../types/types';
 import type {FormInputs} from '../../../types/types';
 import style from '../Modal.module.scss';

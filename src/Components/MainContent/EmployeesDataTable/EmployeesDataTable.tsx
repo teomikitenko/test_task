@@ -1,13 +1,13 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-import type {RootState} from '../../../app/store';
 import {STATUS_COLOR} from '../../../constants/constants';
 import {
   deleteEmployee,
   sortingBy,
-} from '../../../feautures/employees/crudEmployeesSlice';
-import {editUserModal} from '../../../feautures/modals/modalsSlice';
+} from '../../../state/slices/employees/crudEmployeesSlice';
+import {editUserModal} from '../../../state/slices/modals/modalsSlice';
+import type {RootState} from '../../../state/store';
 import type {StatusStyle} from '../../../types/types';
 import style from './EmployeesDataTable.module.scss';
 

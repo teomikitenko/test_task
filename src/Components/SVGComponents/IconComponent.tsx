@@ -25,4 +25,4 @@ const SortIconUp = ({fill}: {fill: string}) => {
   );
 };
 
-export {SortIconDown,SortIconUp};
+export {SortIconDown, SortIconUp};

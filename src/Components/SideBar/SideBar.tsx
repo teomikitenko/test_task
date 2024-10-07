@@ -1,8 +1,8 @@
 import {useSelector} from 'react-redux';
 
-import type {RootState} from '../../app/store';
 import userIcon from '../../assets/image/user.png';
 import settingsIcon from '../../assets/settings.svg';
+import type {RootState} from '../../state/store';
 import Navigation from './Navigation/Navigation';
 import style from './SideBar.module.scss';
 

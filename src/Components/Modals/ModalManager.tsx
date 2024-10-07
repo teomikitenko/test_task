@@ -1,7 +1,7 @@
 import {createPortal} from 'react-dom';
 import {useSelector} from 'react-redux';
 
-import type {RootState} from '../../app/store';
+import type {RootState} from '../../state/store';
 import AddEmloyee from './AddEmployee/AddEmloyee';
 import EditEmployee from './EditEmployee/EditEmployee';
 const ModalManager = () => {
