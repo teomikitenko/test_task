@@ -6,7 +6,7 @@
   &_header {
     display: flex;
     justify-content: space-between;
-    padding: 0 toRem(34) toRem(34) toRem(34);
+    padding: 0 toRem(34) toRem(34);
     background-color: $main_color;
 
     &__user_input_container {
@@ -21,7 +21,7 @@
         padding-right: toRem(20);
 
         &:focus-within {
-          box-shadow: 0 0 4px 5px rgba(64, 77, 97, 0.2);
+          box-shadow: 0 0 4px 5px rgb(64 77 97 / 20%);
         }
 
         input {
@@ -31,8 +31,8 @@
           border: none;
           font-weight: 400;
           font-size: toRem(15);
-          font-family: 'Roboto';
-          color: rgba(64, 77, 97, 1);
+          font-family: Roboto,sans-serif;
+          color: rgb(64 77 97 / 100%);
           caret-color: $accent_color;
 
           &:focus {

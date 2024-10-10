@@ -28,10 +28,12 @@
         div {
           display: flex;
           gap: toRem(15);
+
           p {
             font-weight: 600;
             font-size: toRem(14);
           }
+
           img {
             width: toRem(12);
           }

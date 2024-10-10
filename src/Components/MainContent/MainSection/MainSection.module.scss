@@ -26,8 +26,7 @@
       &__icon {
         display: flex;
         background-color: transparent !important;
-        justify-content: center;
-        align-content: center;
+        place-content: center center;
       }
     }
 

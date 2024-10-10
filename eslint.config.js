@@ -4,9 +4,11 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import sortPlugin from "eslint-plugin-simple-import-sort";
 import tseslint from "typescript-eslint";
+import prettierPlugin from 'eslint-plugin-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist","node_modules/*"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -18,6 +20,7 @@ export default tseslint.config(
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "simple-import-sort": sortPlugin,
+      prettier: prettierPlugin
     },
 
     rules: {
@@ -29,6 +32,7 @@ export default tseslint.config(
       "react-hooks/exhaustive-deps": "off",
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      ...eslintConfigPrettier.rules,
     },
   },
 );
